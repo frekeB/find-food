@@ -36,7 +36,7 @@ body{
 .meal-wrapper{
     max-width: 1280px;
     margin: 0 auto;
-    padding:2rem;
+    padding:  2rem;
     background: #fff;
     text-align: center;
 }
@@ -48,10 +48,14 @@ body{
 }
 .meal-search-box{
     margin: 1.2rem 0;
-    display:flex;
+    display:  flex;
     align-items:stretch;
 }
- .search-control{
+.search-control,
+ .search-btn{
+   width: 100%;   
+}
+ .search-control{   
     padding: 0 1rem;
     font-size: 1.1rem;
     font-family: inherit;
@@ -73,13 +77,92 @@ body{
     border:none;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    transition:all 0.4s linear;
+    transition: all 0.4s linear;
     -webkit-transition: all 0.4s linear;
     -moz-transition: all 0.4s linear;
     -ms-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear; 
  }
  .search-btn:hover{
     background: var(--tenny-tawny-dark);
  }
+.meal-result{
+  margin-top: 4rem;
+}
+#meal{
+  margin: 2.4rem, 0;
+}
+.meal-item{
+ border-radius: 1rem;
+ -webkit-border-radius:  1rem;
+ -moz-border-radius: 1rem;
+ -ms-border-radius: 1rem -o-border-radius 1rem;
+ overflow: hidden;
+ box-shadow: 0 4px 0 4px 21px -12px rgba(0,0,0,0.79);
+  margin: 2rem 0;
+}
+/* .myImage{
+  width:  100%;
+  height: 400px;
+  transform:scale(0.75);
+} */
+.meal-img img{
+  width:100%;
+  display: block;
+  }
+.meal-name{
+  padding: 1.5rem 0.5rem;
+}
+.meal-name h3{
+  font-size:1.4rem;
+}
+.recipe-btn{
+  text-decoration: none;
+  color: #fff;
+  background: var(--tenny-tawny-dark);
+  font-weight:500;
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  display: block;
+  width: 175px;
+  margin: 1rem auto;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+ transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear; 
+}
+.recipe-btn:hover{
+  background:var(--tenny-tawny-dark)
+}
 
+/* Media Queries*/
+@media screen and (min-width: 600px){
+  .meal-search-box{
+    width:540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px){
+  #meal{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .meal-item{
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 992px){
+  #meal{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
