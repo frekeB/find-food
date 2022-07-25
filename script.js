@@ -11,7 +11,7 @@ searchBtn.addEventListener('click', getMealList);
 function getMealList(){
   let searchInputTxt = document.getElementById('search-input').value.trim();
   //console.log(searchInputTxt);
-   fetch('https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast ').then(response => response.json())
+   fetch('').then(response => response.json())
   .then(data => {
     console.log(data);})
 //      let html = '';
