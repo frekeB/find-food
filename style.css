@@ -36,7 +36,7 @@ body{
 .meal-wrapper{
     max-width: 1280px;
     margin: 0 auto;
-    padding:  2rem;
+    padding:2rem;
     background: #fff;
     text-align: center;
 }
@@ -56,7 +56,10 @@ body{
    width: 100%;   
 }
  .search-control{   
-    padding: 0 1rem;
+    display:flex;
+    align-items:stretch;
+}
+ .search-control{
     font-size: 1.1rem;
     font-family: inherit;
     outline: 0;
@@ -256,6 +259,7 @@ body{
   font-size:1.2rem;
   font-weight: 700;
   transition: all 0.4s linear;
+    transition:all 0.4s linear;
     -webkit-transition: all 0.4s linear;
     -moz-transition: all 0.4s linear;
     -ms-transition: all 0.4s linear;
@@ -298,4 +302,7 @@ body{
     grid-template-columns: repeat(3, 1fr);
   }
 }
+  .search-btn:hover{
+    background: var(--tenny-tawny-dark);
+ }
 
